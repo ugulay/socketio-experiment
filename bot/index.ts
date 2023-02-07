@@ -10,7 +10,11 @@ const {
 
 console.log(`Socket server starting`);
 
-const server = new Server(Number(SOCKET_PORT), {});
+const server = new Server(Number(SOCKET_PORT), {
+    cors: {
+        origin: '*',
+    }
+});
 
 let ids = Array();
 
@@ -49,7 +53,8 @@ server.on("connection", (socket) => {
 });
 
 setInterval(() => {
+    console.log(ids);
     server.sockets.sockets.forEach(dat => {
-        console.log(dat.data);
+        //console.log(dat.client.request.headers);
     })
 }, 2000);

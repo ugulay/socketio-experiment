@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "build/bot",
+    "rootDir": "bot"
+    // "paths": { "bot/*": ["bot/*"] }
+  },
+  "include": ["bot"]
+}

@@ -8,6 +8,6 @@ type TMarketMaker = {
     weight: number;
 }
 
-export {
+export type {
     TMarketMaker
 }

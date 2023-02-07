@@ -5,10 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf ./build && tsc",
+    "clean": "rimraf ./build",
+    "build": "rimraf ./build && tsc --project tsconfig.bot.json && next build",
     "dev": "npx nodemon",
-    "start:server": "node build/index.js",
-    "start:client": "node build/client.js"
+    "dev:gui": "next dev",
+    "dev:bot": "npx ts-node ./bot/index.ts",
+    "dev:client": "npx ts-node ./bot/client.ts",
+    "start:gui": "next start",
+    "start:bot": "node build/bot/index.js",
+    "start:client": "node build/bot/client.js"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
+    "@types/react": "18.0.27",
     "@types/uuid": "^9.0.0",
     "@types/websocket": "^1.0.5",
     "@types/ws": "^8.5.4",

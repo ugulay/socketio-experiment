@@ -7,3 +7,4 @@ data/*.log
 .env*
 .db
 .db/log
+*.tsbuildinfo
