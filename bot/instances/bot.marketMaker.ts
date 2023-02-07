@@ -47,6 +47,8 @@ const marketMakerInstance = () => {
 
     } catch (err) {
         console.error(err);
+        //process.exitCode = -999;
+        process.exit(1);
     }
 
 }

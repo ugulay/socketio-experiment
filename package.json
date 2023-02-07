@@ -10,10 +10,10 @@
     "dev": "npx nodemon",
     "dev:gui": "next dev",
     "dev:bot": "npx ts-node ./bot/index.ts",
-    "dev:client": "npx ts-node ./bot/client.ts",
+    "dev:client-marketMaker": "npx ts-node ./bot/instances/bot.marketMaker.ts",
     "start:gui": "next start",
     "start:bot": "node build/bot/index.js",
-    "start:client": "node build/bot/client.js"
+    "start:client-marketMaker": "node build/bot/instances/bot.marketMaker.ts"
   },
   "keywords": [],
   "author": "",
@@ -38,8 +38,11 @@
     "@types/uuid": "^9.0.0",
     "@types/websocket": "^1.0.5",
     "@types/ws": "^8.5.4",
+    "autoprefixer": "^10.4.13",
     "nodemon": "^2.0.20",
+    "postcss": "^8.4.21",
     "rimraf": "^4.0.4",
+    "tailwindcss": "^3.2.4",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
   }
